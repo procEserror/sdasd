@@ -5,10 +5,14 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
+body.light-theme {
     background-color: #f9f9f9;
     color: #333;
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f9f9f9;
 }
 
 .container {
@@ -23,10 +27,19 @@ header {
     color: white;
 }
 
+header.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 header .logo {
     font-size: 30px;
     font-weight: bold;
     color: #f4f4f4;
+}
+
+header.light-theme .logo {
+    color: #333;
 }
 
 nav ul {
@@ -46,6 +59,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: #f0a500;
+}
+
+nav ul li a.light-theme {
+    color: #333;
+}
+
+nav ul li a.light-theme:hover {
     color: #f0a500;
 }
 
@@ -120,6 +141,14 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.product.light-theme {
+    background-color: #fff;
+}
+
+.product.dark-theme {
+    background-color: #444;
+}
+
 .product img {
     max-width: 100%;
     border-radius: 8px;
@@ -154,4 +183,27 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+footer.light-theme {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Кнопка для смены темы */
+.theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #d57b00;
 }
