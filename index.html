@@ -6,7 +6,7 @@
     <title>Мебельный магазин</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-theme">
     <!-- Навигационная панель -->
     <header>
         <div class="container">
@@ -34,43 +34,54 @@
         </div>
     </section>
 
+    <!-- Кнопка для смены темы -->
+    <button id="theme-toggle" class="theme-toggle-btn">Темная тема</button>
+
     <!-- Каталог товаров -->
     <section class="catalog">
         <div class="container">
             <h2>Наши товары</h2>
             <div class="filters">
                 <label>Цена:</label>
-                <select>
-                    <option>До 10 000 ₽</option>
-                    <option>10 000 ₽ - 30 000 ₽</option>
-                    <option>30 000 ₽ - 50 000 ₽</option>
-                    <option>Более 50 000 ₽</option>
+                <select id="price-filter">
+                    <option value="all">Все цены</option>
+                    <option value="1">До 10 000 ₴</option>
+                    <option value="2">10 000 ₴ - 30 000 ₴</option>
+                    <option value="3">30 000 ₴ - 50 000 ₴</option>
+                    <option value="4">Более 50 000 ₴</option>
                 </select>
                 <label>Категория:</label>
-                <select>
-                    <option>Диваны</option>
-                    <option>Кровати</option>
-                    <option>Столы</option>
-                    <option>Стулья</option>
+                <select id="category-filter">
+                    <option value="all">Все</option>
+                    <option value="chairs">Стулья</option>
+                    <option value="sofas">Диваны</option>
+                    <option value="tables">Столы</option>
+                    <option value="chests">Тумбы</option>
                 </select>
             </div>
-            <div class="products">
-                <div class="product">
-                    <img src="https://via.placeholder.com/300x200?text=Диван" alt="Диван">
-                    <h3>Диван Комфорт</h3>
-                    <p>Цена: 25 000 ₽</p>
-                    <a href="#" class="btn">Купить</a>
-                </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/300x200?text=Стул" alt="Стул">
+            <div class="products" id="products-list">
+                <div class="product" data-category="chairs" data-price="3500">
+                    <img src="https://optim.tildacdn.com/stor6431-3432-4538-b833-653833326337/-/format/webp/42346085.png" alt="Стул Элеганс">
                     <h3>Стул Элеганс</h3>
-                    <p>Цена: 3 500 ₽</p>
+                    <p>Цена: 3 500 ₴</p>
                     <a href="#" class="btn">Купить</a>
                 </div>
-                <div class="product">
-                    <img src="https://via.placeholder.com/300x200?text=Тумба" alt="Тумба">
+                <div class="product" data-category="sofas" data-price="25000">
+                    <img src="https://flipper.shop/354-thickbox_default/maxi.jpg" alt="Диван Комфорт">
+                    <h3>Диван Комфорт</h3>
+                    <p>Цена: 25 000 ₴</p>
+                    <a href="#" class="btn">Купить</a>
+                </div>
+                <div class="product" data-category="tables" data-price="15000">
+                    <img src="https://via.placeholder.com/300x200?text=Стол" alt="Стол Офисный">
+                    <h3>Стол Офисный</h3>
+                    <p>Цена: 15 000 ₴</p>
+                    <a href="#" class="btn">Купить</a>
+                </div>
+                <div class="product" data-category="chests" data-price="7000">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcREYkMpVlqQlCisqBVy4OnuJ-8Xj3hgB0vlN2bq5csxCLOmOFRKfLPQfvYMxeJxE3uLUXnOzEA1LXfURScepyrqNbF4taMD35-Hd3ldYZUEXh-kEGut55b1REkxW3RsU6kSHxxjgcfrH6M&usqp=CAc" alt="Тумба Классика">
                     <h3>Тумба Классика</h3>
-                    <p>Цена: 7 000 ₽</p>
+                    <p>Цена: 7 000 ₴</p>
                     <a href="#" class="btn">Купить</a>
                 </div>
             </div>
@@ -83,5 +94,7 @@
             <p>© 2024 Мебельный магазин | Все права защищены</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
